@@ -1,16 +1,5 @@
-const ipc = require('electron').ipcMain;
+const notification = require('./notification/notification-main');
 
-module.exports = () => {
-  const eNotify = require('electron-notify');
-
-  ipc.on('ssf-notification', (e, msg) => {
-    if (!msg.options) {
-      msg.options = {};
-    }
-
-    eNotify.notify({
-      title: msg.title,
-      text: msg.options.body
-    });
-  });
+module.exports = {
+  notification
 };

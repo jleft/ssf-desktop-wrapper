@@ -8,7 +8,7 @@ const ssfElectron = require('ssf-desktop-api-electron');
 let win;
 
 function createWindow() {
-  ssfElectron();
+  ssfElectron.notification();
 
   // Create the browser window.
   win = new BrowserWindow({
