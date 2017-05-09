@@ -9,6 +9,9 @@ import { IpcMessages } from '../common/constants';
 let currentWindow = null;
 
 class Window {
+  innerWindow: any;
+  id: number;
+  
   constructor(options, callback, errorCallback) {
     MessageService.subscribe('*', 'ssf-window-message', (...args) => {
       const event = 'message';
