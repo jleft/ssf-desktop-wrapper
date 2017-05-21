@@ -2,7 +2,7 @@
   "name": "containerjs",
   "version": "0.0.0",
   "scripts": {
-    "bootstrap": "if-env CI=true && echo 'CI true' || echo 'CI false'",
+    "bootstrap": "if-env CI=true && lerna bootstrap --concurrency 1 || lerna bootstrap",
     "build": "lerna run build",
     "test": "npm run lint && lerna run test",
     "lint": "eslint --ignore-path .gitignore **/*.js",
